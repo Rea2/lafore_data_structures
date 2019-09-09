@@ -1,4 +1,4 @@
-// hashChain.java
+package Chap11.hashChain;// hashChain.java
 // demonstrates hash table with separate chaining
 // to run this program: C:>java HashChainApp
 import java.io.*;

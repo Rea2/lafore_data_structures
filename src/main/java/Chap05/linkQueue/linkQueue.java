@@ -1,3 +1,5 @@
+package Chap05.linkQueue;
+
 // linkQueue.java
 // demonstrates queue implemented as double-ended list
 // to run this program: C>java LinkQueueApp

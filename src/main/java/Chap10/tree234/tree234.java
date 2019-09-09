@@ -1,4 +1,4 @@
-// tree234.java
+package Chap10.tree234;// tree234.java
 // demonstrates 234 tree
 // to run this program: C>java Tree234App
 import java.io.*;

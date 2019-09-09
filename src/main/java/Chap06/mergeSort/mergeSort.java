@@ -1,3 +1,5 @@
+package Chap06.mergeSort;
+
 // mergeSort.java
 // demonstrates recursive merge sort
 // to run this program: C>java MergeSortApp

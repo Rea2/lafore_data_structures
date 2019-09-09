@@ -1,3 +1,5 @@
+package Chap06.towers;
+
 // towers.java
 // solves Towers of Hanoi puzzle
 // to run this program: C>java TowersApp

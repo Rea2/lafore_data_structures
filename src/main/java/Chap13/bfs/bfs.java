@@ -1,3 +1,5 @@
+package Chap13.bfs;
+
 // bfs.java
 // demonstrates breadth-first search
 // to run this program: C>java BFSApp
@@ -87,6 +89,7 @@ class Graph
       System.out.print(vertexList[v].label);
       }
 // -------------------------------------------------------------
+
    public void bfs()                   // breadth-first search
       {                                // begin at vertex 0
       vertexList[0].wasVisited = true; // mark it
@@ -118,7 +121,37 @@ class Graph
          if(adjMat[v][j]==1 && vertexList[j].wasVisited==false)
             return j;
       return -1;
-      }  // end getAdjUnvisitedVertex()
+      }
+
+      public void mst()  // minimum spanning tree ( breadth-first)
+      {                                  // start at 0
+         vertexList[0].wasVisited = true;   // mark it
+         Queue queue = new Queue();
+         queue.insert(0);                  // push it
+
+         while( ! queue.isEmpty() )       // until stack empty
+         {                               // get stack top
+            int currentVertex =  queue.remove();
+            // get next unvisited neighbor
+            int v = getAdjUnvisitedVertex(currentVertex);
+            if(v == -1)                     // if no more neighbors
+               queue.remove();           //    pop it away
+            else                            // got a neighbor
+            {
+               vertexList[v].wasVisited = true;
+
+               queue.insert(v);                 // remove it
+               // display edge
+               displayVertex(currentVertex);     // from currentV
+               displayVertex(v);                 // to v
+               System.out.print(" ");
+            }
+         }  // end while(stack not empty)
+
+         // queue is empty, so we're done
+         for(int j=0; j<nVerts; j++)          // reset flags
+            vertexList[j].wasVisited = false;
+      }  // end mst()// end getAdjUnvisitedVertex()
 // -------------------------------------------------------------
    }  // end class Graph
 ////////////////////////////////////////////////////////////////
@@ -132,15 +165,30 @@ class BFSApp
       theGraph.addVertex('C');    // 2
       theGraph.addVertex('D');    // 3
       theGraph.addVertex('E');    // 4
+      theGraph.addVertex('F');    // 5
+      theGraph.addVertex('G');    // 6
+      theGraph.addVertex('H');    // 7
+      theGraph.addVertex('I');    // 8
 
       theGraph.addEdge(0, 1);     // AB
-      theGraph.addEdge(1, 2);     // BC
-      theGraph.addEdge(0, 3);     // AD
+      theGraph.addEdge(0, 4);     // AE
+      theGraph.addEdge(1, 3);     // BC
+      theGraph.addEdge(1, 4);     // BE
+      theGraph.addEdge(2, 4);     // CE
+      theGraph.addEdge(2, 5);     // CG
       theGraph.addEdge(3, 4);     // DE
+      theGraph.addEdge(3, 6);     // DG
+      theGraph.addEdge(4, 7);     // EH
+      theGraph.addEdge(4, 8);     // EI
+      theGraph.addEdge(5, 8);     // FI
+      theGraph.addEdge(6, 7);     // GH
+
+
 
       System.out.print("Visits: ");
       theGraph.bfs();             // breadth-first search
       System.out.println();
+      theGraph.mst();
       }  // end main()
    }  // end class BFSApp
 ////////////////////////////////////////////////////////////////

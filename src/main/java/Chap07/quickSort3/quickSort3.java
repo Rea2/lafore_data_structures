@@ -1,3 +1,5 @@
+package Chap07.quickSort3;
+
 // quickSort3.java
 // demonstrates quick sort; uses insertion sort for cleanup
 // to run this program: C>java QuickSort3App

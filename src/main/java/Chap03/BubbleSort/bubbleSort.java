@@ -1,3 +1,5 @@
+package Chap03.BubbleSort;
+
 // bubbleSort.java
 // demonstrates bubble sort
 // to run this program: C>java BubbleSortApp

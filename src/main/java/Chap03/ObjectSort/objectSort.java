@@ -1,3 +1,5 @@
+package Chap03.ObjectSort;
+
 // objectSort.java
 // demonstrates sorting objects (uses insertion sort)
 // to run this program: C>java ObjectSortApp

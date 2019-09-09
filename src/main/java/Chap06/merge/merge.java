@@ -1,3 +1,5 @@
+package Chap06.merge;
+
 // merge.java
 // demonstrates merging two arrays into a third
 // to run this program: C>java MergeApp

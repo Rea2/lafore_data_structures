@@ -1,4 +1,4 @@
-// interIterator.java
+package Chap05.interIterator;// interIterator.java
 // demonstrates iterators on a linked listListIterator
 // to run this program: C>java InterIterApp
 import java.io.*;                 // for I/O

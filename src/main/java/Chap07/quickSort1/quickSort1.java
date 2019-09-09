@@ -1,3 +1,5 @@
+package Chap07.quickSort1;
+
 // quickSort1.java
 // demonstrates simple version of quick sort
 // to run this program: C>java QuickSort1App

@@ -1,4 +1,4 @@
-// heapSort.java
+package Chap12.heapSort;// heapSort.java
 // demonstrates heap sort
 // to run this program: C>java HeapSortApp
 import java.io.*;

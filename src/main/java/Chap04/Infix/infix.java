@@ -1,4 +1,4 @@
-// infix.java
+package Chap04.Infix;// infix.java
 // converts infix arithmetic expressions to postfix
 // to run this program: C>java InfixApp
 import java.io.*;            // for I/O

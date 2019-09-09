@@ -1,4 +1,4 @@
-// brackets.java
+package Chap04.Brackets;// brackets.java
 // stacks used to check matching brackets
 // to run this program: C>java bracketsApp
 import java.io.*;                 // for I/O

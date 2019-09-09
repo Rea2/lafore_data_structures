@@ -1,4 +1,4 @@
-// stackTriangle.java
+package Chap06.stackTriangle;// stackTriangle.java
 // evaluates triangular numbers, stack replaces recursion
 // to run this program: C>java StackTriangleApp
 import java.io.*;                 // for I/O

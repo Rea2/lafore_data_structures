@@ -1,4 +1,4 @@
-// hash.java
+package Chap11.hash;// hash.java
 // demonstrates hash table with linear probing
 // to run this program: C:>java HashTableApp
 import java.io.*;

@@ -1,4 +1,4 @@
-// heap.java
+package Chap12.heap;// heap.java
 // demonstrates heaps
 // to run this program: C>java HeapApp
 import java.io.*;
