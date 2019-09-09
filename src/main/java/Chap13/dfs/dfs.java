@@ -1,5 +1,12 @@
 package Chap13.dfs;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 // dfs.java
 // demonstrates depth-first search
 // to run this program: C>java DFSApp
@@ -47,7 +54,8 @@ class Graph
    {
    private final int MAX_VERTS = 20;
    private Vertex vertexList[]; // list of vertices
-   private int adjMat[][];      // adjacency matrix
+//   private int adjMat[][];      // adjacency matrix
+   private  List<List<Integer>>  adjList;      // adjacency list
    private int nVerts;          // current number of vertices
    private StackX theStack;
 // ------------------------------------------------------------
@@ -55,11 +63,14 @@ class Graph
       {
       vertexList = new Vertex[MAX_VERTS];
                                           // adjacency matrix
-      adjMat = new int[MAX_VERTS][MAX_VERTS];
+      adjList =  Stream.generate(ArrayList<Integer>::new ).limit(MAX_VERTS).collect(Collectors.toList());
+
+//      adjMat = new int[MAX_VERTS][MAX_VERTS];
       nVerts = 0;
-      for(int y=0; y<MAX_VERTS; y++)      // set adjacency
-         for(int x=0; x<MAX_VERTS; x++)   //    matrix to 0
-            adjMat[x][y] = 0;
+//      for(int y=0; y<MAX_VERTS; y++)      // set adjacency
+//         for(int x=0; x<MAX_VERTS; x++)   //    matrix to 0
+//
+//            adjMat[x][y] = 0;
       theStack = new StackX();
       }  // end constructor
 // ------------------------------------------------------------
@@ -70,8 +81,9 @@ class Graph
 // ------------------------------------------------------------
    public void addEdge(int start, int end)
       {
-      adjMat[start][end] = 1;
-      adjMat[end][start] = 1;
+      adjList.get(start).add(end);
+//      adjMat[start][end] = 1;
+//      adjMat[end][start] = 1;
       }
 // ------------------------------------------------------------
    public void displayVertex(int v)
@@ -107,10 +119,14 @@ class Graph
    // returns an unvisited vertex adj to v
    public int getAdjUnvisitedVertex(int v)
       {
-      for(int j=0; j<nVerts; j++)
-         if(adjMat[v][j]==1 && vertexList[j].wasVisited==false)
-            return j;
-      return -1;
+          return  adjList.get(v)
+                  .stream()
+                  .filter(x -> !vertexList[x].wasVisited )
+                  .findFirst().orElse(-1);
+//      for(int j=0; j<nVerts; j++)
+//         if(adjMat[v][j]==1 && vertexList[j].wasVisited==false)
+//            return j;
+//      return -1;
       }  // end getAdjUnvisitedVertex()
 // ------------------------------------------------------------
    }  // end class Graph
