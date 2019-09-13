@@ -1,0 +1,28 @@
+Task B
+
+Position	DB Developer
+Customer	Edmunds.com, Inc. is one of the most popular American online resources for automotive information. The company is headquartered in Santa Monica, California and maintains an office outside of Detroit, Michigan. The Edmunds.com Web site contains prices for new and used vehicles, a database of national and regional incentives and rebates, dealer and inventory listings, vehicle test drive reviews, and tips and advice on all aspects of car purchases and ownership. 
+
+Project	The project is about moving the entire customer infrastructure from Oracle Coherence to less expensive NoSQL database (after testing and comparison of different databases MongoDB was chosen). The key requirements are to ensure very high level of performance and "migration on the go" that does not disrupt work of other applications (around 50 web applications).
+Tools	Perforce, JProfiler, Splunk, AppDynamics, Maven
+Technologies		Spring Framework, TestNG, EasyMock, Mockito, Jackson, Guava
+
+
+
+My questions to the interviewer:
+
+1.	What characteristics do you look for in employees?
+2.	How would I get feedback on how well my work meets your expectations?
+3.   Where have successful employees in this position progressed to?
+4.   Which aspect of this position do you see as the most challenging?
+5.   Who will I be working most closely with? 
+
+
+questions
+
+questions
+
+questions
+
+
+
